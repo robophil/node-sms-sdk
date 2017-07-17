@@ -1,0 +1,27 @@
+{
+  "name": "node-sms-sdk",
+  "version": "0.0.1",
+  "description": "Sdk for working with multiple sms gateway.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robophil/node-sms-sdk.git"
+  },
+  "keywords": [
+    "node",
+    "sms",
+    "text",
+    "sdk",
+    "twillo",
+    "infobip"
+  ],
+  "author": "oghenerobo@gmail.com <Balogun philip>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Robophil/node-sms-sdk/issues"
+  },
+  "homepage": "https://github.com/Robophil/node-sms-sdk#readme"
+}
