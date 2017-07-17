@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Robophil/node-sms-sdk/issues"
   },
-  "homepage": "https://github.com/Robophil/node-sms-sdk#readme"
+  "homepage": "https://github.com/Robophil/node-sms-sdk#readme",
+  "dependencies": {
+    "twilio": "^3.5.0"
+  }
 }
