@@ -1,21 +1,16 @@
-const configStore = require('../config-store')
 const twilio = require('twilio')
-const key = 'twilio'
 
 let client = null
 
 module.exports = {
 
-    loadConfig: () => {
-        let conf = null
-        if (configStore.has(key) && configStore.get(key).config.accountSid && configStore.get(key).config.accountSid) {
-            conf = configStore.get(key).config
-            client = new twilio(conf['accountSid'], conf['authToken'])
+    loadConfig: (config) => {
+        if (config.accountSid && config.accountSid) {
+            client = new twilio(config['accountSid'], config['authToken'])
             return loaded = true
         } else {
             return false
         }
-        console.log(conf, client)
     },
 
     raw: () => {
@@ -24,7 +19,6 @@ module.exports = {
     },
 
     send: ({ from, to, body }) => {
-        console.log('i-am-here')
         return client.messages.create({
             body: body,
             to: to,  // Text this number
