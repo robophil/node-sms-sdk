@@ -2,7 +2,7 @@ const configStore = require("./config-store")
 const configKey = 'sdk-in-use-*'
 
 module.exports = {
-    addConfig: (sdk, config, adapter) => {
+    setConfig: (sdk, config, adapter) => {
         //store config
         configStore.set(sdk, {
             config,
@@ -11,12 +11,12 @@ module.exports = {
         //load config for adapter
         if (adapter === undefined || adapter === null || !adapter) {
             try {
-                require('./sdk/' + sdk).loadConfig()
+                require('./sdk/' + sdk).loadConfig(config)
             } catch (ex) {
                 throw new Error("could not load adapter")
             }
         } else {
-            configStore.get(sdk).adapter.loadConfig()
+            configStore.get(sdk).adapter.loadConfig(config)
         }
     },
     getConfig: (sdk) => {

@@ -1,17 +1,13 @@
-const configStore = require('../config-store')
 const request = require('request-promise-native')
 const base64 = require('base-64')
-const key = 'infobip'
 
 let encoding = null, options = null
 
 module.exports = {
 
-    loadConfig: () => {
-        let conf = null
-        if (configStore.has(key) && configStore.get(key).config.username && configStore.get(key).config.password) {
-            conf = configStore.get(key).config
-            encoding = base64.encode(`${conf.username}:${conf.password}`)
+    loadConfig: (config) => {
+        if (config.username && config.password) {
+            encoding = base64.encode(`${config.username}:${config.password}`)
             options = {
                 uri: 'https://api.infobip.com/sms/1/text/single',
                 method: 'POST',
