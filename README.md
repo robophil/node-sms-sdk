@@ -98,7 +98,7 @@ Simply write a module that has the following exports.
 ## Example usage
 
 ```javascript
-	const nodeSmsSdk = require('node-sms-sdk')
+    const nodeSmsSdk = require('node-sms-sdk')
     nodeSmsSdk.addConfig('twilio',{accountSid: 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',authToken: 'your_auth_token'})
     nodeSmsSdk.use('twilio')
     nodeSmsSdk.send({
