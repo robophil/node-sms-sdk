@@ -25,6 +25,9 @@
   },
   "homepage": "https://github.com/Robophil/node-sms-sdk#readme",
   "dependencies": {
+    "base-64": "^0.1.0",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4",
     "twilio": "^3.5.0"
   }
 }
