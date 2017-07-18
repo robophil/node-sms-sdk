@@ -8,8 +8,8 @@ module.exports = {
 
     loadConfig: () => {
         let conf = null
-        if (configStore.has(key) && configStore.get(key).accountSid && configStore.get(key).accountSid) {
-            conf = configStore.get(key)
+        if (configStore.has(key) && configStore.get(key).config.accountSid && configStore.get(key).config.accountSid) {
+            conf = configStore.get(key).config
             client = new twilio(conf['accountSid'], conf['authToken'])
             return loaded = true
         } else {
@@ -29,6 +29,6 @@ module.exports = {
             body: body,
             to: to,  // Text this number
             from: from // From a valid Twilio number
-        }).then(data => data).catch(error => error)
+        })
     }
 }
