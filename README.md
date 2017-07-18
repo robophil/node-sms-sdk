@@ -23,7 +23,7 @@ then you use in your project
     * @param config : (object) the configuration needed by this sdk
     * @param adapter : (module) the sdk's adapter
     **/
-    nodeSmsSdk.addConfig(sdk, config, adapter) : void
+    nodeSmsSdk.setConfig(sdk, config, adapter) : void
 
 	/**
     * @param sdk : the name of the sdk
@@ -98,7 +98,7 @@ Simply write a module that has the following exports.
 ## Example usage
 
 ```javascript
-	const nodeSmsSdk = require('node-sms-sdk')
+    const nodeSmsSdk = require('node-sms-sdk')
     nodeSmsSdk.addConfig('twilio',{accountSid: 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',authToken: 'your_auth_token'})
     nodeSmsSdk.use('twilio')
     nodeSmsSdk.send({

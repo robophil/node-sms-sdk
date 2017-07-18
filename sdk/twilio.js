@@ -19,7 +19,6 @@ module.exports = {
     },
 
     send: ({ from, to, body }) => {
-        console.log('i-am-here')
         return client.messages.create({
             body: body,
             to: to,  // Text this number
