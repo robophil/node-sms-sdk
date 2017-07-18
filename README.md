@@ -23,7 +23,7 @@ then you use in your project
     * @param config : (object) the configuration needed by this sdk
     * @param adapter : (module) the sdk's adapter
     **/
-    nodeSmsSdk.addConfig(sdk, config, adapter) : void
+    nodeSmsSdk.setConfig(sdk, config, adapter) : void
 
 	/**
     * @param sdk : the name of the sdk
