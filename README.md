@@ -26,11 +26,7 @@ then you use in your project
     * @param config : (object) the configuration needed by this sdk
     * @param adapter : (module) the sdk's adapter. This is used when using an external sdk
     **/
-<<<<<<< HEAD
-    nodeSmsSdk.setConfig(sdk, config, adapter) : void
-=======
     nodeSmsSdk.addConfig(sdk: string, config:object [, adapter]) : void
->>>>>>> hotfix/update
 
 	/**
     * @param sdk : the name of the sdk
