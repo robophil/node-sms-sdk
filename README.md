@@ -109,6 +109,8 @@ What to do when you're done??
 
 ## Example usage
 
+### twillo
+
 ```javascript
     //require  module 
 	const nodeSmsSdk = require('node-sms-sdk')
@@ -121,6 +123,29 @@ What to do when you're done??
 
     //use twilio as default
     nodeSmsSdk.use('twilio')
+
+    //send message
+    nodeSmsSdk.send({
+    	from: '+2348120725879', 
+        to: '+23408040320343', 
+        body: 'This works yay!!!'
+    }).then(console.log).catch(console.log)
+```
+
+### infobip
+
+```javascript
+    //require  module 
+	const nodeSmsSdk = require('node-sms-sdk')
+
+    //add config for an sdk. twilio ships internally
+    nodeSmsSdk.addConfig('info',{
+        username: 'someusername', 
+        password: 'somepassword'
+    })
+
+    //use infobip as default
+    nodeSmsSdk.use('infobip')
 
     //send message
     nodeSmsSdk.send({
